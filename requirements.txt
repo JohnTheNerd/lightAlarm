@@ -1,0 +1,6 @@
+flask
+lifxlan
+requests
+git+https://gitlab.com/JohnTheNerd/python-yeelight.git
+Flask-APScheduler
+retry

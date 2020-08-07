@@ -1,0 +1,51 @@
+{
+    "lights": {
+        "bedroom": [{
+            "mac": "AA:BB:CC:DD:EE:FF",
+            "ip": "192.168.2.200",
+            "multizone": false,
+            "brand": "yeelight"
+        }],
+    
+        "lamp": [{
+            "mac": "AA:BB:CC:DD:EE:FF",
+            "ip": "192.168.2.201",
+            "multizone": false,
+            "brand": "lifx"
+        }],
+        "lightstrip": [{
+            "mac": "AA:BB:CC:DD:EE:FF",
+            "ip": "192.168.2.202",
+            "multizone": true,
+            "brand": "lifx"
+        }]
+    },
+    "colors": {
+        "red": [65535, 65535, 39321, 3500],
+        "orange": [6500, 65535, 39321, 3500],
+        "yellow": [9000, 65535, 39321, 3500],
+        "green": [16173, 65535, 39321, 3500],
+        "cyan": [29814, 65535, 39321, 3500],
+        "blue": [43634, 65535, 39321, 3500],
+        "purple": [50486, 65535, 39321, 3500],
+        "pink": [58275, 65535, 47142, 3500],
+        "white": [58275, 0, 39321, 5500],
+        "cold_white": [58275, 0, 39321, 9000],
+        "warm_white": [58275, 0, 39321, 3200],
+        "gold": [58275, 0, 39321, 2500]
+    },
+    "slack": {
+        "webhook": "https://hooks.slack.com/services/WEBHOOK/GOES/HERE",
+        "messages": [
+            "I'm running a little late",
+            "bleep bloop, I'm a bot. my creator couldn't get out of bed and I was tasked to let you know"
+        ],
+        "delay": 1800
+    },
+    "duration": 7200,
+    "colorChangeFrequency": 15,
+    "initialFadeIn": 2400,
+    "insaneMode": false,
+    "passwordHash": "SHA512HASH",
+    "myIP": "0.0.0.0"
+  }

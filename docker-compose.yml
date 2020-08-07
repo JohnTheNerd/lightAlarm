@@ -1,0 +1,29 @@
+version: '3.7'
+services:
+  server:
+    build:
+      context: .
+    logging:
+      driver: "json-file"
+      # limit log size so it does not grow indefinitely
+      options:
+        max-file: 5
+        max-size: 50m
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+    ports:
+      - '5000:5000'
+    volumes:
+      - '/etc/localtime:/etc/localtime:ro'
+    secrets:
+      - 'lightalarm'
+    configs:
+      - source: 'lightalarm'
+        target: '/config.json'
+    image: lightalarm
+secrets:
+  lightalarm:
+    external: true
